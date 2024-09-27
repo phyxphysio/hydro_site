@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neck Disability Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 10px;
+            display: block;
+        }
+        .introduction {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Neck Disability Index Questionnaire</h1>
+
+    <div class="introduction">
+        <p><strong>Instructions:</strong></p>
+        <p>
+            This questionnaire has been designed to give your health practitioner information as to how your neck pain has affected your ability to manage in everyday life.
+            Please answer every section and mark in each section only the ONE box which applies to you. We realise you may consider that two of the statements in any one section relate to you, but please just mark the box which most closely describes your problem.
+        </p>
+    </div>
+
+    <div id="questionnaire">
+        <!-- Section 1 -->
+        <div class="section" id="section1">
+            <h2>1. Pain Intensity</h2>
+            <label><input type="radio" name="pain" value="0" onclick="calculateScore()"> I have no pain at the moment.</label>
+            <label><input type="radio" name="pain" value="1" onclick="calculateScore()"> The pain is very mild at the moment.</label>
+            <label><input type="radio" name="pain" value="2" onclick="calculateScore()"> The pain is moderate at the moment.</label>
+            <label><input type="radio" name="pain" value="3" onclick="calculateScore()"> The pain is fairly severe at the moment.</label>
+            <label><input type="radio" name="pain" value="4" onclick="calculateScore()"> The pain is very severe at the moment.</label>
+            <label><input type="radio" name="pain" value="5" onclick="calculateScore()"> The pain is the worst imaginable at the moment.</label>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section" id="section2">
+            <h2>2. Personal Care (Washing, Dressing)</h2>
+            <label><input type="radio" name="personal_care" value="0" onclick="calculateScore()"> I can look after myself normally without causing extra pain.</label>
+            <label><input type="radio" name="personal_care" value="1" onclick="calculateScore()"> I can look after myself normally but it causes extra pain.</label>
+            <label><input type="radio" name="personal_care" value="2" onclick="calculateScore()"> It is painful to look after myself and I am slow and careful.</label>
+            <label><input type="radio" name="personal_care" value="3" onclick="calculateScore()"> I need some help but manage most of my personal care.</label>
+            <label><input type="radio" name="personal_care" value="4" onclick="calculateScore()"> I need help every day in most aspects of self-care.</label>
+            <label><input type="radio" name="personal_care" value="5" onclick="calculateScore()"> I do not get dressed, I wash with difficulty and stay in bed.</label>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section" id="section3">
+            <h2>3. Lifting</h2>
+            <label><input type="radio" name="lifting" value="0" onclick="calculateScore()"> I can lift heavy weights without extra pain.</label>
+            <label><input type="radio" name="lifting" value="1" onclick="calculateScore()"> I can lift heavy weights but it gives extra pain.</label>
+            <label><input type="radio" name="lifting" value="2" onclick="calculateScore()"> Pain prevents me from lifting heavy weights off the floor, but I can manage if they are conveniently positioned, for example on a table.</label>
+            <label><input type="radio" name="lifting" value="3" onclick="calculateScore()"> Pain prevents me from lifting heavy weights, but I can manage light to medium weights if they are conveniently positioned.</label>
+            <label><input type="radio" name="lifting" value="4" onclick="calculateScore()"> I can lift very light weights.</label>
+            <label><input type="radio" name="lifting" value="5" onclick="calculateScore()"> I cannot lift or carry anything at all.</label>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section" id="section4">
+            <h2>4. Reading</h2>
+            <label><input type="radio" name="reading" value="0" onclick="calculateScore()"> I can read as much as I want to with no pain in my neck.</label>
+            <label><input type="radio" name="reading" value="1" onclick="calculateScore()"> I can read as much as I want to with slight pain in my neck.</label>
+            <label><input type="radio" name="reading" value="2" onclick="calculateScore()"> I can read as much as I want with moderate pain in my neck.</label>
+            <label><input type="radio" name="reading" value="3" onclick="calculateScore()"> I cannot read as much as I want because of moderate pain in my neck.</label>
+            <label><input type="radio" name="reading" value="4" onclick="calculateScore()"> I can hardly read at all because of severe pain in my neck.</label>
+            <label><input type="radio" name="reading" value="5" onclick="calculateScore()"> I cannot read at all.</label>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section" id="section5">
+            <h2>5. Headaches</h2>
+            <label><input type="radio" name="headaches" value="0" onclick="calculateScore()"> I have no headaches at all.</label>
+            <label><input type="radio" name="headaches" value="1" onclick="calculateScore()"> I have slight headaches which come infrequently.</label>
+            <label><input type="radio" name="headaches" value="2" onclick="calculateScore()"> I have moderate headaches which come infrequently.</label>
+            <label><input type="radio" name="headaches" value="3" onclick="calculateScore()"> I have moderate headaches which come frequently.</label>
+            <label><input type="radio" name="headaches" value="4" onclick="calculateScore()"> I have severe headaches which come frequently.</label>
+            <label><input type="radio" name="headaches" value="5" onclick="calculateScore()"> I have headaches almost all the time.</label>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section" id="section6">
+            <h2>6. Concentration</h2>
+            <label><input type="radio" name="concentration" value="0" onclick="calculateScore()"> I can concentrate fully when I want to with no difficulty.</label>
+            <label><input type="radio" name="concentration" value="1" onclick="calculateScore()"> I can concentrate fully when I want to with slight difficulty.</label>
+            <label><input type="radio" name="concentration" value="2" onclick="calculateScore()"> I have a fair degree of difficulty in concentrating when I want to.</label>
+            <label><input type="radio" name="concentration" value="3" onclick="calculateScore()"> I have a lot of difficulty in concentrating when I want to.</label>
+            <label><input type="radio" name="concentration" value="4" onclick="calculateScore()"> I have a great deal of difficulty in concentrating when I want to.</label>
+            <label><input type="radio" name="concentration" value="5" onclick="calculateScore()"> I cannot concentrate at all.</label>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section" id="section7">
+            <h2>7. Work</h2>
+            <label><input type="radio" name="work" value="0" onclick="calculateScore()"> I can do as much work as I want to.</label>
+            <label><input type="radio" name="work" value="1" onclick="calculateScore()"> I can only do my usual work, but no more.</label>
+            <label><input type="radio" name="work" value="2" onclick="calculateScore()"> I can do most of my usual work, but no more.</label>
+            <label><input type="radio" name="work" value="3" onclick="calculateScore()"> I cannot do my usual work.</label>
+            <label><input type="radio" name="work" value="4" onclick="calculateScore()"> I can hardly do any work at all.</label>
+            <label><input type="radio" name="work" value="5" onclick="calculateScore()"> I cannot do any work at all.</label>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="section" id="section8">
+            <h2>8. Driving</h2>
+            <label><input type="radio" name="driving" value="0" onclick="calculateScore()"> I can drive my car without any neck pain.</label>
+            <label><input type="radio" name="driving" value="1" onclick="calculateScore()"> I can drive my car as long as I want with slight pain in my neck.</label>
+            <label><input type="radio" name="driving" value="2" onclick="calculateScore()"> I can drive my car as long as I want with moderate pain in my neck.</label>
+            <label><input type="radio" name="driving" value="3" onclick="calculateScore()"> I cannot drive my car as long as I want because of moderate pain in my neck.</label>
+            <label><input type="radio" name="driving" value="4" onclick="calculateScore()"> I can hardly drive at all because of severe pain in my neck.</label>
+            <label><input type="radio" name="driving" value="5" onclick="calculateScore()"> I cannot drive my car at all.</label>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="section" id="section9">
+            <h2>9. Sleeping</h2>
+            <label><input type="radio" name="sleeping" value="0" onclick="calculateScore()"> I have no trouble sleeping.</label>
+            <label><input type="radio" name="sleeping" value="1" onclick="calculateScore()"> My sleep is slightly disturbed (less than 1 hr sleepless).</label>
+            <label><input type="radio" name="sleeping" value="2" onclick="calculateScore()"> My sleep is mildly disturbed (1-2 hrs sleepless).</label>
+            <label><input type="radio" name="sleeping" value="3" onclick="calculateScore()"> My sleep is moderately disturbed (2-3 hrs sleepless).</label>
+            <label><input type="radio" name="sleeping" value="4" onclick="calculateScore()"> My sleep is greatly disturbed (3-5 hrs sleepless).</label>
+            <label><input type="radio" name="sleeping" value="5" onclick="calculateScore()"> My sleep is completely disturbed (5-7 hrs sleepless).</label>
+        </div>
+
+        <!-- Section 10 -->
+        <div class="section" id="section10">
+            <h2>10. Recreation</h2>
+            <label><input type="radio" name="recreation" value="0" onclick="calculateScore()"> I am able to engage in all my recreation activities with no neck pain at all.</label>
+            <label><input type="radio" name="recreation" value="1" onclick="calculateScore()"> I am able to engage in all my recreation activities, with some pain in my neck.</label>
+            <label><input type="radio" name="recreation" value="2" onclick="calculateScore()"> I am able to engage in most, but not all of my usual recreation activities because of pain in my neck.</label>
+            <label><input type="radio" name="recreation" value="3" onclick="calculateScore()"> I am able to engage in a few of my usual recreation activities because of pain in my neck.</label>
+            <label><input type="radio" name="recreation" value="4" onclick="calculateScore()"> I can hardly do any recreation activities because of pain in my neck.</label>
+            <label><input type="radio" name="recreation" value="5" onclick="calculateScore()"> I cannot do any recreation activities at all.</label>
+        </div>
+
+        <!-- Total Score -->
+        <h2>Total Score: <span id="totalScore">0</span> / 50</h2>
+    </div>
+
+    <script>
+        function calculateScore() {
+            let total = 0;
+            const radios = document.querySelectorAll('input[type="radio"]:checked');
+            radios.forEach(radio => {
+                total += parseInt(radio.value);
+            });
+            document.getElementById('totalScore').innerText = total;
+        }
+    </script>
+</body>
+</html>
