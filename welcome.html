@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Welcome to Northern Beaches Hydrotherapy</title>
+    <meta name="description"
+        content="Welcome to Northern Beaches Hydrotherapy! Your account has been successfully created. Start your wellness journey with our expert hydrotherapy services in Sydney's Northern Beaches.">
+    <meta name="keywords"
+        content="hydrotherapy, Northern Beaches, physiotherapy, wellness, rehabilitation, Sydney, fitness, water therapy">
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="icon" href="assets/img/favicons/favicon.ico" type="image/x-icon">
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Welcome page specific styles */
+        .welcome-hero-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 202, 240, 0.2) 100%);
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 1rem;
+            border: none;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .emoji-icon {
+            line-height: 1;
+        }
+
+        .next-steps-section {
+            background-color: #f8f9fa;
+            border-radius: 1rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+            border-radius: 1rem;
+            padding: 60px 0;
+            color: white;
+        }
+
+        .progress-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .progress-indicator::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #dee2e6;
+            z-index: 0;
+        }
+
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            width: 25%;
+        }
+
+        .step-indicator {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #0d6efd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .active .step-indicator {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .completed .step-indicator {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #495057;
+            text-align: center;
+        }
+
+        .active .step-title {
+            color: #0d6efd;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .trophy-animation {
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .letter-spacing-2 {
+            letter-spacing: 2px;
+        }
+
+        .rounded-4 {
+            border-radius: 1rem;
+        }
+
+        .bg-primary-soft {
+            background-color: rgba(13, 110, 253, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/gallery/logo.png" width="220" alt="Northern Beaches Hydrotherapy logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html#benefits">Benefits</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html#book">Book</a></li>
+                    </ul>
+                    <a href="https://app.northernbeacheshydrotherapy.com/dashboard" class="btn btn-primary ms-lg-3">
+                        <i class="bi bi-layout-text-window-reverse me-1"></i> Dashboard
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Welcome Hero Section -->
+        <section class="welcome-hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-5 mb-lg-0">
+                        <div class="mb-4 d-inline-block px-4 py-2 rounded-pill bg-primary-soft">
+                            <span class="text-primary fw-bold">✓ Registration Complete</span>
+                        </div>
+                        <h1 class="display-4 fw-bold mb-3">Welcome to Northern Beaches Hydrotherapy!</h1>
+                        <p class="lead mb-4">
+                            Your account has been successfully created. We're excited to have you join our community of
+                            wellness and healing through water. Here's what you can do next to get started on your
+                            hydrotherapy journey.
+                        </p>
+
+                        <!-- Progress Indicator -->
+                        <div class="progress-indicator">
+                            <div class="progress-step completed">
+                                <div class="step-indicator">
+                                    <i class="bi bi-check-lg"></i>
+                                </div>
+                                <div class="step-title">Sign Up</div>
+                            </div>
+                            <div class="progress-step active">
+                                <div class="step-indicator">2</div>
+                                <div class="step-title">Book First Session</div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-indicator">3</div>
+                                <div class="step-title">Attend Class</div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-indicator">4</div>
+                                <div class="step-title">Track Progress</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="https://app.northernbeacheshydrotherapy.com/dashboard"
+                                class="btn btn-primary btn-lg rounded-pill px-4">
+                                Go to Dashboard
+                            </a>
+                            <a href="#next-steps" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+                                View Next Steps
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <div class="position-relative">
+                            <div class="trophy-animation d-inline-block">
+                                <span class="emoji-icon display-1 mb-3">🏆</span>
+                            </div>
+                            <div class="bg-white shadow-lg rounded-4 p-4 mt-3">
+                                <h4 class="mb-3">Congratulations!</h4>
+                                <p class="mb-0">You've taken the first step toward improved wellness through
+                                    hydrotherapy.</p>
+                            </div>
+
+                            <!-- Decorative elements -->
+                            <div class="position-absolute" style="top: -20px; left: 20px; z-index: -1;">
+                                <span class="emoji-icon display-3">💧</span>
+                            </div>
+                            <div class="position-absolute" style="bottom: -10px; right: 10px; z-index: -1;">
+                                <span class="emoji-icon display-3">💪</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps Section -->
+        <section class="py-5 next-steps-section" id="next-steps">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h6 class="text-primary fw-bold text-uppercase letter-spacing-2 mb-2">Getting Started</h6>
+                    <h2 class="display-5 fw-bold mb-4">Your Next Steps</h2>
+                    <div class="mx-auto" style="max-width: 700px;">
+                        <p class="lead text-muted">Here's what you can do now to make the most of your Northern Beaches
+                            Hydrotherapy experience:</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Book First Session -->
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm feature-card">
+                            <div class="card-body p-4">
+                                <div class="mb-4 text-center">
+                                    <span class="emoji-icon display-2">📅</span>
+                                </div>
+                                <h4 class="fw-bold mb-3 text-center">Book Your First Session</h4>
+                                <p class="text-muted">Visit your dashboard to schedule your first hydrotherapy class.
+                                    Choose a time that works best for you.</p>
+                                <div class="mt-4 text-center">
+                                    <a href="https://app.northernbeacheshydrotherapy.com/dashboard"
+                                        class="btn btn-sm btn-primary rounded-pill">
+                                        Book Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Set Goals -->
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm feature-card">
+                            <div class="card-body p-4">
+                                <div class="mb-4 text-center">
+                                    <span class="emoji-icon display-2">🎯</span>
+                                </div>
+                                <h4 class="fw-bold mb-3 text-center">Set Your Health Goals</h4>
+                                <p class="text-muted">Define what you want to achieve with hydrotherapy. Setting clear
+                                    goals helps track your progress.</p>
+                                <div class="mt-4 text-center">
+                                    <a href="https://app.northernbeacheshydrotherapy.com/goals"
+                                        class="btn btn-sm btn-primary rounded-pill">
+                                        Set Goals
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section class="py-5 bg-white">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="assets/img/gallery/hero.png" alt="Hydrotherapy session"
+                            class="img-fluid rounded-4 shadow">
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-primary fw-bold text-uppercase letter-spacing-2 mb-2">What to Expect</h6>
+                        <h2 class="display-5 fw-bold mb-4">Your First Hydrotherapy Session</h2>
+
+                        <div class="mb-4">
+                            <p class="lead">Here's what you can expect during your first visit:</p>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-primary fs-3">
+                                <i class="bi bi-1-circle-fill"></i>
+                            </div>
+                            <div>
+                                <h5>Warm Welcome and Orientation</h5>
+                                <p class="text-muted">Our staff will greet you and show you around the facilities,
+                                    including changing rooms and pool area.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-primary fs-3">
+                                <i class="bi bi-2-circle-fill"></i>
+                            </div>
+                            <div>
+                                <h5>Initial Assessment</h5>
+                                <p class="text-muted">Your physiotherapist will discuss your health goals and any
+                                    specific concerns or limitations.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-primary fs-3">
+                                <i class="bi bi-3-circle-fill"></i>
+                            </div>
+                            <div>
+                                <h5>Guided Session</h5>
+                                <p class="text-muted">You'll be guided through gentle exercises in our warm water pool,
+                                    tailored to your specific needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="me-3 text-primary fs-3">
+                                <i class="bi bi-4-circle-fill"></i>
+                            </div>
+                            <div>
+                                <h5>Post-Session Feedback</h5>
+                                <p class="text-muted">After your session, you'll have the opportunity to discuss how you
+                                    felt and what adjustments might be needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Bring Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card border-0 shadow rounded-4">
+                            <div class="card-body p-5">
+                                <h3 class="mb-4 text-center">What to Bring to Your Session</h3>
+
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3 fs-1 text-primary">
+                                                <span class="emoji-icon">🩳</span>
+                                            </div>
+                                            <div>
+                                                <h5>Swimwear</h5>
+                                                <p class="mb-0 text-muted">Comfortable swimming attire</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3 fs-1 text-primary">
+                                                <span class="emoji-icon">🧖</span>
+                                            </div>
+                                            <div>
+                                                <h5>Towel</h5>
+                                                <p class="mb-0 text-muted">For drying off after your session</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3 fs-1 text-primary">
+                                                <span class="emoji-icon">💧</span>
+                                            </div>
+                                            <div>
+                                                <h5>Water Bottle</h5>
+                                                <p class="mb-0 text-muted">Stay hydrated during your session</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3 fs-1 text-primary">
+                                                <span class="emoji-icon">👕</span>
+                                            </div>
+                                            <div>
+                                                <h5>Change of Clothes</h5>
+                                                <p class="mb-0 text-muted">Comfortable clothes to change into after your
+                                                    session</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3 fs-1 text-primary">
+                                                <span class="emoji-icon">📋</span>
+                                            </div>
+                                            <div>
+                                                <h5>Medical Information</h5>
+                                                <p class="mb-0 text-muted">Any relevant medical records or information
+                                                    about your condition</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5">
+            <div class="container py-4">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold mb-4">Ready to Begin Your Wellness Journey?</h2>
+                        <p class="lead mb-5">Book your first hydrotherapy session now and take the next step toward
+                            improved wellness through the healing power of water.</p>
+
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="https://app.northernbeacheshydrotherapy.com/dashboard"
+                                class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold">
+                                Book Your First Session
+                            </a>
+                            <a href="tel:+61474240014" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">
+                                Call Us: 0474 240 014
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="py-4 bg-primary">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6 text-center text-md-start text-white">
+                        <p class="mb-0">&copy; Northern Beaches Hydrotherapy
+                            <script>document.write(new Date().getFullYear())</script>
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <a href="index.html" class="text-white text-decoration-none me-3">Main Site</a>
+                        <a href="terms.html" class="text-white text-decoration-none">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap"
+        rel="stylesheet">
+
+    <script>
+        // Create confetti effect for celebration
+        document.addEventListener('DOMContentLoaded', function () {
+            createConfetti();
+        });
+
+        function createConfetti() {
+            const colors = ['#0d6efd', '#0dcaf0', '#ffc107', '#198754', '#dc3545'];
+            const totalConfetti = 100;
+
+            for (let i = 0; i < totalConfetti; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const left = Math.random() * 100 + 'vw';
+                const animationDuration = Math.random() * 3 + 2 + 's';
+                const size = Math.random() * 10 + 5 + 'px';
+
+                confetti.style.backgroundColor = color;
+                confetti.style.left = left;
+                confetti.style.width = size;
+                confetti.style.height = size;
+                confetti.style.animationDuration = animationDuration;
+                confetti.style.opacity = Math.random() + 0.5;
+
+                document.body.appendChild(confetti);
+
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    confetti.remove();
+                }, parseFloat(animationDuration) * 1000);
+            }
+        }
+    </script>
+</body>
+
+</html>
